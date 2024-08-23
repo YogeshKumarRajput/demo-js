@@ -1,0 +1,99 @@
+<html>
+    <head> 
+        <style>
+		
+		    table {
+			    width:355px;
+				height:400px;
+				margin:auto;
+			    background-color:#e1e2e3;
+				border:10px outset gray;
+				border-radius:15px;
+				
+			}
+			
+			button{
+			    width:65px;
+				height:65px;
+				background-color:;
+				border-radius:50%;
+				font-size:30px;
+				border:2px solid black;
+				
+			}
+			input{
+			    width:330px;
+				height:75px;
+			    text-align:right;
+				border:2px solid black;
+				font-size:40px;
+				background-color:lime;
+				
+				
+			}
+			
+		
+		</style>
+	    <script>
+		    function btnpress(x)
+			{
+			    document.getElementById("t1").value += x;
+			}
+			function cleardata ()
+			{
+			    document.getElementById("t1").value = "";
+			}
+			function result()
+			{
+			    var a = document.getElementById("t1").value;
+			    var b = eval(a);
+				document.getElementById("t1").value = b;
+			}
+			function backpress()
+			{
+			    var a = document.getElementById("t1").value;
+				var b = a.length;
+				var c = a.substr(0, b-1);
+				document.getElementById("t1").value = c;
+			}
+		</script>
+	
+	</head>
+	<body>
+	    <table border="5px">
+		    <tr> 
+			    <td colspan="4"><input id="t1" placeholder="0" readonly /></td>
+			</tr>
+		    <tr align="center">
+			    <td><button onclick="cleardata('')" style="background-color:black; color:red;">C</button></td>
+			    <td><button onclick="backpress()" style="background-color:black; color:red;">&larr;</button></td>
+			    <td><button onclick="btnpress('%')" style="background-color:black; color:red;">%</button></td>
+			    <td><button onclick="btnpress('/')" style="background-color:gray;">/</button></td>
+			</tr>
+		    <tr align="center">
+			    <td><button onclick="btnpress('7')">7</button></td>
+			    <td><button onclick="btnpress('8')">8</button></td>
+			    <td><button onclick="btnpress('9')">9</button></td>
+			    <td><button onclick="btnpress('*')" style="background-color:gray;">*</button></td>
+			</tr>
+		    <tr align="center">
+			    <td><button onclick="btnpress('4')">4</button></td>
+			    <td><button onclick="btnpress('5')">5</button></td>
+			    <td><button onclick="btnpress('6')">6</button></td>
+			    <td><button onclick="btnpress('-')" style="background-color:gray;">-</button></td>
+			</tr>
+		    <tr align="center">
+			    <td><button onclick="btnpress('1')">1</button></td>
+			    <td><button onclick="btnpress('2')">2</button></td>
+			    <td><button onclick="btnpress('3')">3</button></td>
+			    <td><button onclick="btnpress('+')" style="background-color:gray;">+</button></td>
+			</tr>
+		    <tr align="center">
+			    <td><button onclick="btnpress('0')">0</button></td>
+			    <td><button onclick="btnpress('.')">.</button></td>
+			    <td><button onclick="btnpress('00')">00</button></td>
+			    <td><button onclick="result('')"style="background-color:gray;">=</button></td>
+			</tr>
+		</table><center><h1><big style="color:red;">Calculator</big><small>&nbsp&nbsp(Yogesh Kumar)</small></h1> </center>
+	</body>
+</html>
